@@ -10,7 +10,12 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.dviss.calorietracker.navigation.navigate
 import com.dviss.calorietracker.ui.theme.CalorieTrackerTheme
+import com.dviss.core.navigation.Route
 import com.dviss.onboarding_presentation.welcome.WelcomeScreen
 
 class MainActivity : ComponentActivity() {
@@ -18,12 +23,41 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CalorieTrackerTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
+                val navController = rememberNavController()
+                NavHost(
+                    navController = navController,
+                    startDestination = Route.WELCOME
                 ) {
-                    WelcomeScreen()
+                    composable(Route.WELCOME) {
+                        WelcomeScreen(onNavigate = navController::navigate)
+                    }
+                    composable(Route.AGE) {
+
+                    }
+                    composable(Route.GENDER) {
+
+                    }
+                    composable(Route.HEIGHT) {
+
+                    }
+                    composable(Route.WEIGHT) {
+
+                    }
+                    composable(Route.NUTRIENT_GOAL) {
+
+                    }
+                    composable(Route.ACTIVITY) {
+
+                    }
+                    composable(Route.GOAL) {
+
+                    }
+                    composable(Route.TRACKER_OVERVIEW) {
+
+                    }
+                    composable(Route.SEARCH) {
+
+                    }
                 }
             }
         }
