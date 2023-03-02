@@ -7,7 +7,6 @@ plugins {
 
 android {
     compileSdk = ProjectConfig.compileSdk
-    namespace = "com.dviss.calorietracker"
 
     defaultConfig {
         applicationId = ProjectConfig.appId
