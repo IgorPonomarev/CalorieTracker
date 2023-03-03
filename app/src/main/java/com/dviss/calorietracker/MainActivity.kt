@@ -18,6 +18,8 @@ import com.dviss.calorietracker.ui.theme.CalorieTrackerTheme
 import com.dviss.core.navigation.Route
 import com.dviss.onboarding_presentation.age.AgeScreen
 import com.dviss.onboarding_presentation.gender.GenderScreen
+import com.dviss.onboarding_presentation.height.HeightScreen
+import com.dviss.onboarding_presentation.weight.WeightScreen
 import com.dviss.onboarding_presentation.welcome.WelcomeScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -32,7 +34,7 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
                     scaffoldState = scaffoldState,
-                ) {padding ->
+                ) { padding ->
                     NavHost(
                         navController = navController,
                         startDestination = Route.WELCOME,
@@ -51,10 +53,16 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(Route.HEIGHT) {
-
+                            HeightScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.WEIGHT) {
-
+                            WeightScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.NUTRIENT_GOAL) {
 
