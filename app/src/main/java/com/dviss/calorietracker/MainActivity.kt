@@ -16,8 +16,10 @@ import androidx.navigation.compose.rememberNavController
 import com.dviss.calorietracker.navigation.navigate
 import com.dviss.calorietracker.ui.theme.CalorieTrackerTheme
 import com.dviss.core.navigation.Route
+import com.dviss.onboarding_presentation.activity.ActivityScreen
 import com.dviss.onboarding_presentation.age.AgeScreen
 import com.dviss.onboarding_presentation.gender.GenderScreen
+import com.dviss.onboarding_presentation.goal.GoalScreen
 import com.dviss.onboarding_presentation.height.HeightScreen
 import com.dviss.onboarding_presentation.weight.WeightScreen
 import com.dviss.onboarding_presentation.welcome.WelcomeScreen
@@ -65,9 +67,15 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(Route.NUTRIENT_GOAL) {
+                            ActivityScreen(
+                                onNavigate = navController::navigate
+                            )
 
                         }
                         composable(Route.ACTIVITY) {
+                            GoalScreen(
+                                onNavigate = navController::navigate
+                            )
 
                         }
                         composable(Route.GOAL) {
