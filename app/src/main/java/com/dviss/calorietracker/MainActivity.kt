@@ -16,8 +16,11 @@ import androidx.navigation.compose.rememberNavController
 import com.dviss.calorietracker.navigation.navigate
 import com.dviss.calorietracker.ui.theme.CalorieTrackerTheme
 import com.dviss.core.navigation.Route
+import com.dviss.onboarding_presentation.gender.GenderScreen
 import com.dviss.onboarding_presentation.welcome.WelcomeScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +38,7 @@ class MainActivity : ComponentActivity() {
 
                     }
                     composable(Route.GENDER) {
-
+                        GenderScreen(onNavigate = navController::navigate)
                     }
                     composable(Route.HEIGHT) {
 
