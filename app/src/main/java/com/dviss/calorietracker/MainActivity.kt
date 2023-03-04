@@ -1,6 +1,5 @@
 package com.dviss.calorietracker
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,6 +20,7 @@ import com.dviss.onboarding_presentation.age.AgeScreen
 import com.dviss.onboarding_presentation.gender.GenderScreen
 import com.dviss.onboarding_presentation.goal.GoalScreen
 import com.dviss.onboarding_presentation.height.HeightScreen
+import com.dviss.onboarding_presentation.nutrient_goal.NutrientGoalScreen
 import com.dviss.onboarding_presentation.weight.WeightScreen
 import com.dviss.onboarding_presentation.welcome.WelcomeScreen
 import dagger.hilt.android.AndroidEntryPoint
@@ -66,20 +66,21 @@ class MainActivity : ComponentActivity() {
                                 onNavigate = navController::navigate
                             )
                         }
-                        composable(Route.NUTRIENT_GOAL) {
+                        composable(Route.ACTIVITY) {
                             ActivityScreen(
                                 onNavigate = navController::navigate
                             )
-
                         }
-                        composable(Route.ACTIVITY) {
+                        composable(Route.GOAL) {
                             GoalScreen(
                                 onNavigate = navController::navigate
                             )
-
                         }
-                        composable(Route.GOAL) {
-
+                        composable(Route.NUTRIENT_GOAL) {
+                            NutrientGoalScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.TRACKER_OVERVIEW) {
 
