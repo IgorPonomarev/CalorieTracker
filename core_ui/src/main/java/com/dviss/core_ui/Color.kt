@@ -1,4 +1,4 @@
-package com.dviss.calorietracker.ui.theme
+package com.dviss.core_ui
 
 import androidx.compose.ui.graphics.Color
 

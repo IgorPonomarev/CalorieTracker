@@ -23,6 +23,7 @@ import com.dviss.onboarding_presentation.height.HeightScreen
 import com.dviss.onboarding_presentation.nutrient_goal.NutrientGoalScreen
 import com.dviss.onboarding_presentation.weight.WeightScreen
 import com.dviss.onboarding_presentation.welcome.WelcomeScreen
+import com.dviss.tracker_presentation.tracker_overview.TrackerOverviewScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -83,7 +84,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(Route.TRACKER_OVERVIEW) {
-
+                            TrackerOverviewScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.SEARCH) {
 
