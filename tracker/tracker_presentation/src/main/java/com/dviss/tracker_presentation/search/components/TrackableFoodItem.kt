@@ -27,6 +27,7 @@ import androidx.compose.ui.layout.LastBaseline
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -57,7 +58,7 @@ fun TrackableFoodItem(
             )
             .background(MaterialTheme.colors.surface)
             .clickable { onClick() }
-            .padding(spacing.spaceMedium)
+            .padding(end = spacing.spaceMedium)
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -146,7 +147,8 @@ fun TrackableFoodItem(
                         keyboardOptions = KeyboardOptions(
                             imeAction = if (trackableFoodUiState.amount.isNotEmpty()) {
                                 ImeAction.Done
-                            } else ImeAction.Default
+                            } else ImeAction.Default,
+                            keyboardType = KeyboardType.Number
                         ),
                         keyboardActions = KeyboardActions(
                             onDone = {
