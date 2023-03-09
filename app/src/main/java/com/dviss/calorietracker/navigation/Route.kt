@@ -1,4 +1,4 @@
-package com.dviss.core.navigation
+package com.dviss.calorietracker.navigation
 
 object Route {
     const val WELCOME = "welcome"

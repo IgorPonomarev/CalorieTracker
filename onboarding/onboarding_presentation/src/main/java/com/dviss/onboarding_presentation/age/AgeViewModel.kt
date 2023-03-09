@@ -5,9 +5,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.dviss.core.R
 import com.dviss.core.domain.preferences.Preferences
 import com.dviss.core.domain.usecase.FilterOutDigits
-import com.dviss.core.navigation.Route
 import com.dviss.core.util.UiEvent
 import com.dviss.core.util.UiText
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -15,7 +15,6 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import com.dviss.core.R
 
 @HiltViewModel
 class AgeViewModel @Inject constructor(
@@ -43,7 +42,7 @@ class AgeViewModel @Inject constructor(
                 return@launch
             }
             preferences.saveAge(ageNumber)
-            _uiEvent.send(UiEvent.Navigate(Route.HEIGHT))
+            _uiEvent.send(UiEvent.Success)
         }
     }
 }
