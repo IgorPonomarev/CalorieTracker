@@ -28,6 +28,7 @@ Onboarding contains eight screens collecting personal information used to calcul
 ![screenshots_onboarding](https://user-images.githubusercontent.com/116557489/224476229-b0258257-9e07-42e2-8446-54d4cb0bbf82.png)
 
 ## Tracker Overview Screen and Search Screen
+Food information in search is provided by [OpenFoodFacts](https://us.openfoodfacts.org/) API
 
 ![screenshots_tracker](https://user-images.githubusercontent.com/116557489/224476862-bfab9a15-127b-4f7e-ada1-ca342c8fb164.png)
 
