@@ -1,5 +1,5 @@
 # Calorie Tracker
-Calorie Tracker is a fully functional food tracker, build with Kotlin and Jetpack Compose. It allows user to enter personal information (age, height, etc...) and track food accordingly to their nutrient goals.
+Calorie Tracker is a fully functional food tracker, built with Kotlin and Jetpack Compose. It allows user to enter personal information (age, height, etc...) and track food accordingly to their nutrient goals.
 
 ## Technology stack
 ### Core:
@@ -27,7 +27,9 @@ Onboarding contains eight screens collecting personal information used to calcul
 
 ![screenshots_onboarding](https://user-images.githubusercontent.com/116557489/224476229-b0258257-9e07-42e2-8446-54d4cb0bbf82.png)
 
-## Tracker Overview screen and Search Screen
+## Tracker Overview Screen and Search Screen
+
+![screenshots_tracker](https://user-images.githubusercontent.com/116557489/224476862-bfab9a15-127b-4f7e-ada1-ca342c8fb164.png)
 
 ## Additional Information
 This app is an implementation of [Philipp Lackner](https://www.youtube.com/@PhilippLackner) course "[Building Industry-Level Apps With Multi-Module Architecture](https://pl-coding.com/multi-module-course)".
